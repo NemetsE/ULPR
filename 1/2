@@ -1,0 +1,11 @@
+program CheckInequality;
+var
+  a, b, c: integer;
+begin
+  writeln('Введите числа a, b, c:');
+  readln(a, b, c);
+  if (a + c > b) then
+    writeln('Неравенство выполняется')
+  else
+    writeln('Неравенство не выполняется');
+end.
