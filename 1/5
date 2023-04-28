@@ -1,0 +1,16 @@
+program Squares;
+var
+  n, i, square: integer;
+begin
+  writeln('Введите число n: ');
+  readln(n);
+  writeln('Квадраты чисел, не превышающие n: ');
+  i := 1;
+  square := 1;
+  while square <= n do
+  begin
+    writeln(square);
+    i := i + 1;
+    square := i * i;
+  end;
+end.
