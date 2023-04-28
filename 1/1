@@ -1,0 +1,25 @@
+program Treugolnik;
+var
+  x1, y1, x2, y2, x3, y3: real;
+  a, b, c, p, S: real; 
+begin
+  writeln('Введите координаты вершин треугольника:');
+  write('x1: ');
+  readln(x1);
+  write('y1: ');
+  readln(y1);
+  write('x2: ');
+  readln(x2);
+  write('y2: ');
+  readln(y2);
+  write('x3: ');
+  readln(x3);
+  write('y3: ');
+  readln(y3);
+  a := sqrt(sqr(x2 - x1) + sqr(y2 - y1));
+  b := sqrt(sqr(x3 - x2) + sqr(y3 - y2));
+  c := sqrt(sqr(x3 - x1) + sqr(y3 - y1));
+  p := (a + b + c) / 2;
+  S := sqrt(p * (p - a) * (p - b) * (p - c));
+  writeln('Площадь треугольника: ', S);
+end.
