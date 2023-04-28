@@ -1,0 +1,11 @@
+using System;
+class Program {
+    static void Main(string[] args) {
+        double h, t;
+        const double g = 9.8;
+        Console.Write("Введите высоту камня (в метрах): ");
+        h = double.Parse(Console.ReadLine());
+        t = Math.Sqrt(2 * h / g);
+        Console.WriteLine("Время падения камня: " + t + " секунд");
+    }
+}
