@@ -1,0 +1,16 @@
+program SumOfDigits;
+var
+  num, digit, sum: integer;
+begin
+  write('Введите число: ');
+  readln(num);
+  sum := 0;
+  while num > 0 do
+  begin
+    digit := num mod 10;
+    if digit mod 2 = 0 then
+      sum := sum + digit;
+    num := num div 10;
+  end;
+  writeln('Сумма четных цифр равна: ', sum);
+end.
