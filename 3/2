@@ -1,0 +1,29 @@
+int years = int.Parse(Console.ReadLine());
+for (int month = 1; month <= 12; month++)
+{
+    int days = 0;
+    bool isLeap = DateTime.IsLeapYear(years);
+    if (month == 2)
+    {
+        if (isLeap)
+        {
+            days = 29;
+        }
+        else
+        {
+            days = 28;
+        }
+    }
+    else if (month == 4 || month == 6 || month == 9 || month == 11)
+    {
+        days = 30;
+    }
+    else //
+    {
+        days = 31;
+    }
+    DateTime lastDayOfMonth = new DateTime(years, month, days);
+    int offset = ((int)DayOfWeek.Thursday - (int)lastDayOfMonth.DayOfWeek + 7) % 7;
+    DateTime lastThursday = lastDayOfMonth.AddDays(offset);
+    Console.WriteLine($"{lastThursday.Day}/{lastThursday.Month}/{lastThursday.Year} последний четверг месяца");
+}
