@@ -1,0 +1,14 @@
+using System;
+class MainClass {
+  public static void Main (string[] args) {
+    Console.Write("Введите координату x: ");
+    double x = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите координату y: ");
+    double y = Convert.ToDouble(Console.ReadLine());
+    if (y == 0) {
+      Console.WriteLine("Точка ({0}, {1}) принадлежит прямой y=0", x, y);
+    } else {
+      Console.WriteLine("Точка ({0}, {1}) не принадлежит прямой y=0", x, y);
+    }
+  }
+}
